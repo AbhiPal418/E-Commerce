@@ -17,17 +17,6 @@
             color: #333;
         }
 
-        .card{
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 20px;
-            border: 1px solid #000000;
-            height: 300px;
-            width: 200px;
-            margin: 5px;
-        }
         a {
             display: inline-block;
             margin: 10px 0;
@@ -45,27 +34,23 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-top: 20px;
-
         }
 
         .product-card ul {
             list-style-type: none;
-            padding: 10px;
-            display: flex;
-            flex-direction: row;
+            padding: 0;
         }
 
         .product-card li {
             margin-bottom: 15px;
-            border: 2px solid #000000;
         }
 
         .product-card h2 {
-            margin: 10px;
+            margin: 0 0 10px 0;
         }
 
         .product-card p {
-            margin: 10px;
+            margin: 0 0 10px 0;
         }
 
         .product-card button {
@@ -74,7 +59,6 @@
             color: white;
             border: none;
             cursor: pointer;
-
         }
 
         .product-card button:hover {
@@ -84,30 +68,30 @@
 </head>
 
 <body>
-    <h1>Home Page</h1>
-    <h1>Hello {{name}}!</h1>
+    <h1>Customer Dashboard</h1>
+    <p>Welcome, {{name}}!</p>
+    <a href="/cart">View Cart</a><br>
+    <a href="/logout">Logout</a>
 
-    <div class="login">
-        <a href="/login">Login</a>
-    </div>
-    <div class="login">
-        <a href="/signup">Sign Up</a>
-    </div>
+    {{!-- add product card. --}}
+
+
     <div class="product-card">
-
-        <h2>Products</h2>
         <ul>
-
             {{#each products}}
-            <div class="card">
-                <h1>{{this.product}}</h1>
-                <p>{{this.quantity}}</p>
+            <li>
+                <h2>{{this.name}}</h2>
                 <p>Price: ₹{{this.price}}</p>
                 <button>Add to Cart</button>
-            </div>
+            </li>
             {{/each}}
         </ul>
-
     </div>
+
+
+    <a href="/orders">View Orders</a><br>
+    <a href="/profile">Edit Profile</a>
+
+</body>
 
 </html>

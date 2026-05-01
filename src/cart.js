@@ -10,8 +10,6 @@ mongoose.connect(mongoURI, {
 })
 
 
-// const mongoose = require("../config/db");
-
 const cartSchema = new mongoose.Schema({
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -25,8 +23,16 @@ const cartSchema = new mongoose.Schema({
                 ref: "Product",
                 required: true
             },
-            quantity: { type: Number, default: 1 },
-            price: { type: Number, required: true }
+            quantity: { 
+                type: Number, 
+                default: 1 
+                
+            },
+            price: { 
+                type: Number, 
+                required: true 
+                
+            }
         }
     ]
 });

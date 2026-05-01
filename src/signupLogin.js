@@ -13,8 +13,13 @@ const LoginSchema = new mongoose.Schema({
     username: {
         type: String,
         maxLength: 15,
-        unique:true,
         required: true
+    },
+    email:{
+        type:String,
+        maxLength:20,
+        unique:true,
+        required:true
     },
     password: {
         type: String,
