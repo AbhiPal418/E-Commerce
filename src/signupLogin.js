@@ -26,10 +26,14 @@ const LoginSchema = new mongoose.Schema({
         maxLength: 14,
         unique:true,
         required: true
+    },
+    isAdmin:{
+        type:Boolean,
+        default:false
     }
 })
 
 
-const collection = new mongoose.model("connection1", LoginSchema)
+const collection = new mongoose.model("User", LoginSchema)
 
 module.exports = collection

@@ -1,3 +1,4 @@
+{{!--
 <!DOCTYPE html>
 <html lang="en">
 
@@ -17,7 +18,7 @@
             color: #333;
         }
 
-        .card{
+        .card {
             background-color: white;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
@@ -27,7 +28,11 @@
             height: 300px;
             width: 200px;
             margin: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
+
         a {
             display: inline-block;
             margin: 10px 0;
@@ -66,19 +71,49 @@
 
         .product-card p {
             margin: 10px;
+            justify-self: flex-start;
         }
 
         .product-card button {
             padding: 10px 15px;
-            background-color: #28a745;
+            background-color: #ff751f;
             color: white;
             border: none;
             cursor: pointer;
+            display: block;
+            align-self: flex-end;
+            margin: auto;
+            border-radius: 7px;
+
 
         }
 
         .product-card button:hover {
-            background-color: #218838;
+            background-color: #ff8e0d;
+        }
+
+        .searchProduct {
+            margin-top: 20px;
+        }
+
+        .searchProduct input[type="text"] {
+            padding: 10px;
+            width: 200px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .searchProduct button {
+            padding: 10px 15px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .searchProduct button:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
@@ -93,6 +128,14 @@
     <div class="login">
         <a href="/signup">Sign Up</a>
     </div>
+
+    <div class="searchProduct">
+        <form action="/search" method="GET">
+            <input type="text" name="query" placeholder="Search for products..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
     <div class="product-card">
 
         <h2>Products</h2>
@@ -100,14 +143,113 @@
 
             {{#each products}}
             <div class="card">
-                <h1>{{this.product}}</h1>
-                <p>{{this.quantity}}</p>
+                <h1>{{this.productName}}</h1>
+                <p>{{this.productDescription}}</p>
                 <p>Price: ₹{{this.price}}</p>
-                <button>Add to Cart</button>
+                <form action="/add-to-cart/{{this._id}}" method="POST">
+                    <input type="hidden" name="price" value="{{this.price}}">
+                    <a href="/buy-now/{{this._id}}" type="button">Buy Now</a>
+                    <button type="submit">Add to Cart</button>
+                </form>
             </div>
             {{/each}}
         </ul>
 
     </div>
+
+</html> --}}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopify-The best shoping website</title>
+    <link rel="stylesheet" href="/css/nav.css">
+    <link rel="stylesheet" href="/css/popupbar.css">
+    <link rel="stylesheet" href="/css/maincontent.css">
+    <link rel="stylesheet" href="/css/card.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Saira+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Share+Tech&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Add 'show' class to make it visible -->
+    <div class="cart-bar show">
+        Item added to your cart 🛒
+    </div>
+
+
+    <div class="container">
+        <nav class="navbar">
+            <div class="sec1nav">
+                <img src="/images/shop.svg" alt="shop">
+                <h2>SHOPIFY</h2>
+            </div>
+            <!-- <img src="shop.svg" alt="shop"> -->
+            <div class="navmiddle">
+
+                <P></P>
+            </div>
+            <div class="sec2nav">
+                <!-- <img id = "a01" src="/images/opencart.svg" alt=""> -->
+                <h3 id="a11"><a href="/signup">Sign up</a></h3>
+                <h3 id="a12"><a href="/login">Log in</a></h3>
+                {{!-- <a href="/templets/Viewcart.html"><img id="a01" src="/images/opencart.svg" alt=""></a>
+                <img id="a02" src="/images/dots.svg" alt="shop"> --}}
+
+            </div>
+        </nav>
+        <main class="main-content">
+            <div class="Bigcontent">
+                {{#each products}}
+                <div class="itemscard">
+                    <div class="card">
+                        <div class="image-box">
+                            <img src="/images/MensStyleLooks.jpeg" alt="product">
+                            <button class="add-btn">Add to Cart</button>
+                        </div>
+
+                        <div class="content">
+                            <h3>{{this.productName}}</h3>
+                            <p class="desc">{{this.productDescription}}</p>
+
+                            <div class="price">
+                                <span class="new">₹{{this.price}}</span>
+                                {{!-- <span class="old">₹{{this.originalPrice}}</span> --}}
+                            </div>
+
+                        </div>
+                        <div class="cart">
+                            <form action="/add-to-cart/{{this._id}}" method="POST">
+                                <input type="hidden" name="price" value="{{this.price}}">
+                                <a href="/buy-now/{{this._id}}" type="button">Buy Now</a>
+                                <button type="submit">Add to Cart</button>
+                            </form>
+                        </div>
+                    </div>
+
+                </div>
+                {{/each}}
+
+
+                {{!-- <div class="viewoption">
+                    <ul>
+                        <li>MENS SPECIAL</li>
+                        <li>WOMENS SPECIAL</li>
+                        <li>NEW ARRIVAL</li>
+                    </ul>
+                </div> --}}
+            </div>
+        </main>
+        <script src="/function/script.js"></script>
+</body>
 
 </html>

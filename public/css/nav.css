@@ -1,0 +1,127 @@
+* {
+    transition: all 0.3s;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    /* border: 2px solid black; */
+}
+
+body {
+    height: 100%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(190, 207, 222);
+}
+
+.container {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    /* height: auto; */
+    height: 700px;
+    width: 390px;
+    /* border: 2px solid black; */
+}
+
+/* nav img{
+    height: 40px;
+    width: 40px;
+} */
+
+.container nav {
+
+    background-color: white;
+    width: 100%;
+    height: 12%;
+}
+
+.sec1nav{
+
+    display: flex;
+    justify-content: center;
+}
+.sec2nav{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-right: 10px;
+}
+.sec2nav h3{
+    background-color: rgb(240, 133, 94);
+    border-radius: 25px;
+    padding: 8px;
+}
+
+.sec2nav h3 a{
+    text-decoration: none;
+    color: black;
+}
+.sec2nav h3 a:hover{
+    transform: scale(1.1);
+}
+#a11{
+    
+    border: 2px solid black;
+    background-color: white;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sec1nav h2 {
+    text-decoration: underline;
+    text-decoration-color: transparent;
+
+    /* we can't use transition property on text decoration */
+    transition: text-decoration 0.3s ease-in;
+}
+
+.sec1nav h2:hover {
+    /* text-decoration: underline; */
+    /* transition: all 5s ease-in; */
+    text-decoration-color: black;
+}
+
+@media (min-width: 768px) {
+
+    body {
+        display: block;
+        align-items: flex-start;
+        padding: 0px;
+        height: 100%;
+        width: 100%;
+        margin: 0;
+    }
+
+    .container {
+        /* display: block; */
+        width: 100%;
+        max-width: none;
+        height: 100%;
+        /* border: 2px solid black; */
+        padding: 0;
+    }
+
+    .container nav {
+        display: flex;
+
+        margin: 0;
+    }
+
+    .navbar {
+        max-width: 100%;
+        margin: auto;
+    }
+
+    .sec1nav {
+        align-items: center;
+        gap: 10px;
+    }
+
+    .sec1nav h2 {
+        font-size: 1.8rem;
+    }
+}

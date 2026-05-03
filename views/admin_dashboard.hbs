@@ -46,6 +46,7 @@
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
             padding: 20px;
             margin-top: 20px;
+            width: 300px;
 
         }
 
@@ -58,93 +59,70 @@
         }
 
         .product-card li {
-            margin-bottom: 15px;
+            margin-right: 20px;
         }
 
         .product-card h2 {
             margin: 0 0 10px 0;
-        }
-
-        .product-card p {
-            margin: 0 0 10px 0;
-        }
-
-        .product-card form {
-            margin: 0;
-            padding: 0;
 
         }
 
-        .product-card button,#buynow{
-            padding: 10px 15px;
-            background-color: #ff751f;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .product-card button:hover,#buynow:hover {
-            background-color: #ff7d2c;
-        }
-        .searchProduct {
-            margin-top: 20px;
-        }
-        .searchProduct input[type="text"] {
-            padding: 10px;
-            width: 300px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .searchProduct button {
-            padding: 10px 15px;
+        .product-card button {
             background-color: #007BFF;
             color: white;
             border: none;
+            padding: 10px 15px;
+            margin-right: 10px;
             cursor: pointer;
+            border-radius: 5px;
         }
-        .searchProduct button:hover {
+
+        .product-card button:hover {
             background-color: #0056b3;
         }
     </style>
 </head>
 
 <body>
-    <h1>Customer Dashboard</h1>
-    <p>Welcome, {{name}}!</p>
-    <a href="/cart">View Cart</a><br>
-    <a href="/logout">Logout</a>
-    <div class="searchProduct">
-        <form action="/customer-dashboard" method="GET">
-            <input type="text" name="query" placeholder="Search for products..." required>
-            <button type="submit">Search</button>
-        </form>
-    </div>
-    {{!-- add product card. --}}
-
-
-    <div class="product-card">
+    <h1>Admin Dashboard</h1>
+    <p>Welcome to the admin dashboard!</p>
+    <a href="/add-product">Add Product</a>
+    <div class="product-list">
+        <h2>Product List</h2>
         <ul>
             {{#each products}}
-            <div class="card">
+            <div class="product-card">
                 <li>
-                    <h2>{{this.productName}}</h2>
+                    <h3>{{this.productName}}</h3>
                     <p>{{this.productDescription}}</p>
-                    <p>Price: ₹{{this.price}}</p>
-                    <form action="/add-to-cart/{{this._id}}" method="POST">
-                        <input type="hidden" name="price" value="{{this.price}}">
-                        <button type="submit">Add to Cart</button>
+                    <p>Price: ₹ {{this.price}}</p>
+                    
+                    <form method="POST" action="/delete-product/{{this._id}}">
+                        <button type="submit">Delete</button>
                     </form>
-                    <a href="/buy-now/{{this._id}}" id="buynow" type="button">Buy Now</a>
-
+                    <a href="/edit-product/{{this._id}}">Edit</a>
                 </li>
             </div>
             {{/each}}
         </ul>
     </div>
 
-
-    <a href="/orders">View Orders</a><br>
-    <a href="/profile">Edit Profile</a>
+    <div class="orderlist">
+        <h2>Order List</h2>
+        <ul>
+            {{#each orders}}
+            <div class="product-card">
+                <li>
+                    <h3>Order ID: {{this._id}}</h3>
+                    <p>Customer Name: {{this.customerName}}</p>
+                    <p>Product Name: {{this.productName}}</p>
+                    <p>Quantity: {{this.quantity}}</p>
+                    <p>Total Price: ₹ {{this.totalPrice}}</p>
+                </li>
+            </div>
+            {{/each}}
+        </ul>
+    </div>
 
 </body>
 

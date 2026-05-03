@@ -12,7 +12,11 @@ mongoose.connect(mongoURI, {
 
 const ProductSchema = new mongoose.Schema({
 
-    product: {
+    productName: {
+        type: String,
+        required: true
+    },
+    productDescription: {
         type: String,
         required: true
     },

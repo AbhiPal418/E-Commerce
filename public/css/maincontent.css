@@ -1,0 +1,153 @@
+.main-content{
+    position:relative;
+    height: calc(100% - 17.5%);
+    margin-top: 2px;
+    /* border: 20px solid black; */
+}
+.viewoption{
+    background-color: aliceblue;
+    height: 100%;
+    width: 50%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: -400px;
+}
+.Bigcontent{
+    overflow-y: scroll;
+    margin: 2px;
+    /* border: 2px solid black; */
+    height: calc(100% - 2%);
+    display: flex;
+    flex-wrap: wrap;
+    gap:7px;
+}
+
+.itemscard{
+    overflow: hidden;
+    position: relative;
+    height: 70%;
+    width: 100%;
+    /* border: 2px solid black; */
+    box-sizing: border-box;
+    margin: 1px
+}
+
+/* .itemscard .img-container img{
+    height: 402px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.itemscard .img-container img:hover{
+    transform: scale(1.1);
+} */
+/* .bottombar{
+    width: 100%;
+    height: calc(185px - 140px);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    gap: 19px;
+    background-color: whitesmoke;
+} */
+/* .buynow{
+    background-color: rgb(73, 185, 73);
+    border-radius: 19px;
+    padding: 7px;
+}
+.buynow:hover{
+    transform: scale(1.1);
+}
+.price{
+    font-weight: bold;
+} */
+
+@media (min-width: 768px) {
+
+    .main-content {
+        height: 85vh;
+        width: 100%;
+        
+    }
+
+    /* fix scroll box */
+    .Bigcontent {
+        display: flex;
+        flex-wrap: wrap;
+        /* flex-direction: row; */
+        overflow: hidden;
+        height: auto;
+        justify-content: flex-start;
+        gap: 30px;
+        padding: 10px;
+    }
+
+    /* cards: 3 per row */
+    .itemscard {
+        display: flex;
+        flex-direction: column;
+        width: 17%;
+        height: auto;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* fix image scaling */
+    /* .itemscard .img-container img {
+        overflow: hidden;
+        display: block;
+        width: 100%;
+        height: 267px;
+        
+    } */
+
+    /* remove absolute positioning */
+    .bottombar {
+        position: static;
+        height: auto;
+        padding: 10px;
+    }
+
+    /* better desktop interaction */
+    /* .itemscard img:hover {
+        transform: scale(1.1);
+    } */
+
+    /* .itemscard:hover .img-container img {
+        transform: scale(1.1);
+    } */
+
+    /* sidebar becomes normal section */
+    .viewoption {
+        position: absolute;
+        width: 25%;
+        height: 100%;
+        margin-top: 10px;
+        background-color: white;
+        top: -20px;
+        /* border: 1px solid #ccc; */
+    }
+
+    .viewoption ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        padding: 10px;
+        /* font-size: medium; */
+    }
+
+    .viewoption li {
+        list-style: none;
+        cursor: pointer;
+        font-size: larger;
+        
+    }
+    /* .Bigcontent{
+        border: 2px solid black;
+    } */
+
+}
