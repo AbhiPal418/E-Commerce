@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+    <link rel="stylesheet" href="/css/place_order.css">
+
+</head>
+
+<body>
+
+    <h1>Place Order</h1>
+    <div class="back">
+        <a href="/customer-dashboard">Home</a><br>
+        <a href="/logout">Logout</a>
+    </div>
+
+    <div class="placeOrder">
+        <form action="/place-order/{{product._id}}" method="POST">
+            <h2>{{product.productName}}</h2>
+            <p>{{product.productDescription}}</p>
+            <p>Price: ₹ <span id="totalPrice">{{product.price}}</span></p>
+
+            <label>
+                <input type="radio" name="paymentMethod"  value="COD" onchange="updatePrice()" required>
+                Cash on Delivery
+            </label>
+
+            <label>
+                <input type="radio" name="paymentMethod" checked value="ONLINE" onchange="updatePrice()">
+                Online Payment
+            </label>
+            <input type="text" name="location" placeholder="Enter your location" required>
+            <input type="hidden" name="price" value="{{product.price}}">
+            <button type="submit">Place Order</button>
+        </form>
+    </div>
+
+
+    <script>
+        function updatePrice() {
+            const basePrice = {{ product.price }}; // from backend
+            const codCharge = basePrice * 0.01; // extra charge
+
+            const selected = document.querySelector('input[name="paymentMethod"]:checked');
+
+            let finalPrice = basePrice;
+
+            if (selected.value === "COD") {
+                finalPrice += codCharge;
+            }
+
+            document.getElementById("totalPrice").innerText = finalPrice;
+
+            document.getElementById("hiddenPrice").value = finalPrice;
+        }
+
+        
+    </script>
+</body>
+
+</html>

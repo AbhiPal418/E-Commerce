@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order List</title>
+    <link rel="stylesheet" href="/css/order_list.css">
+</head>
+
+<body>
+    <div class="nav">
+        <nav>
+            <h1>Order History</h1>
+            <div class="nav-links">
+                <a href="/customer-dashboard">Home</a>
+                <a href="/logout">Logout</a>
+            </div>
+        </nav>
+    </div>
+
+    <div class="order">
+        <ul>
+            {{#if orders.length}}
+            {{#each orders}}
+            <div class="eachorder">
+                <li id="prodname"><b>Product Name:</b> {{product.productName}}</li>
+                <li><b>Product Description:</b> {{product.productDescription}}</li>
+                <li><b>Total:</b> {{this.price}}</li>
+                <li><b>Status:</b> {{this.status}}</li>
+                <li><b>Order Date:</b> {{this.orderDate}}</li>
+                <hr>
+            </div>
+            {{/each}}
+            {{else}}
+            <p>You have no orders yet.</p>
+            {{/if}}
+
+        </ul>
+    </div>
+</body>
+
+</html>

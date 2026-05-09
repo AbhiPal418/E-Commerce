@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{product.productName}}</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+
+        .nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        .nav ul li {
+            margin: 0 15px;
+        }
+
+        .nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .thisProduct {
+            display: flex;
+            gap: 20px;
+        }
+
+        .similarProduct ul {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .produccard {
+            border: 1px solid #ccc;
+            padding: 10px;
+            width: 200px;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="nav">
+            <nav>
+                <ul>
+                    <li><a href="/customer-dashboard">Home</a></li>
+                    <li><a href="/cart">Cart</a></li>
+                    <li><a href="/orders">Orders</a></li>
+                    <li><a href="/profile">Profile</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <main>
+        <section class="thisProduct">
+            <div class="thisProduct">
+                <div class="productDetails">
+                    <h1>{{product.productName}}</h1>
+                    <img src="{{product.image}}" alt="product" height="200px">
+                    <p>{{product.productDescriptionDetailed}}</p>
+                    <p>Price: ₹{{product.price}}</p>
+                </div>
+
+                <div class="addCart-buynow">
+                    <form action="/add-to-cart/{{product._id}}" method="POST">
+                        <input type="hidden" name="price" value="{{product.price}}">
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                    <form action="/buy-now/{{product._id}}" method="GET">
+                        <input type="hidden" name="price" value="{{product.price}}">
+                        <button type="submit">Buy Now</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="similarProduct">
+                <h2>Similar Products</h2>
+                <ul>
+                    {{#each similarProducts}}
+                    <div class="produccard">
+                        <li>
+                            <div class="image">
+                                <a href="/product-details/{{this._id}}">
+                                    <img src="{{this.image}}" alt="product" height="200px">
+                                </a>
+                            </div>
+                            <div class="image-desc">
+                                <p>{{this.productDescription}}</p>
+                                <p>{{this.productName}}</p>
+                                <p>Price: ₹{{this.price}}</p>
+                            </div>
+                            <div class="addCart-buynow">
+                                <form action="/add-to-cart/{{this._id}}" method="POST">
+                                    <input type="hidden" name="price" value="{{this.price}}">
+                                    <button type="submit">Add to Cart</button>
+                                </form>
+                                <form action="/buy-now/{{this._id}}" method="GET">
+                                    <input type="hidden" name="price" value="{{this.price}}">
+                                    <button type="submit">Buy Now</button>
+                                </form>
+                            </div>
+                        </li>
+                    </div>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Store. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

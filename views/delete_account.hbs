@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Account</title>
+</head>
+
+<body>
+
+    <a href="/customer-dashboard">Back to Home</a>
+
+    <form action="/delete-account" method="POST">
+        <input type="password" name="password" placeholder="Enter your password to confirm" required>
+        <br>
+        <input type="checkbox" id="confirm" name="confirmation" value="yes" required>
+        <label for="confirm">Yes, I want to delete my account</label>
+
+        {{#if error}}
+        <p style="color: red;">{{error}}</p>
+        {{/if}}
+        <button type="submit">Confirm Deletion</button>
+
+    </form>
+
+
+</body>
+
+</html>

@@ -33,38 +33,6 @@
     margin: 1px
 }
 
-/* .itemscard .img-container img{
-    height: 402px;
-    width: 100%;
-    object-fit: cover;
-    object-position: center;
-}
-.itemscard .img-container img:hover{
-    transform: scale(1.1);
-} */
-/* .bottombar{
-    width: 100%;
-    height: calc(185px - 140px);
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-    bottom: 0;
-    gap: 19px;
-    background-color: whitesmoke;
-} */
-/* .buynow{
-    background-color: rgb(73, 185, 73);
-    border-radius: 19px;
-    padding: 7px;
-}
-.buynow:hover{
-    transform: scale(1.1);
-}
-.price{
-    font-weight: bold;
-} */
-
 @media (min-width: 768px) {
 
     .main-content {

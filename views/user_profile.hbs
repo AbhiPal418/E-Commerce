@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+</head>
+
+<body>
+
+    <header>
+
+        <div class="links">
+            <nav>
+                <ul>
+                    <li><a href="/customer-dashboard">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="/orders">View Orders</a></li>
+                    <li><a href="/change-password">Change Password</a></li>
+                    <li><a href="/delete-account">Delete Account</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    
+    <main>
+        <section>
+
+            <div class="details">
+                <h1>Hello {{user.username}}</h1>
+                <p>Username: {{user.username}}</p>
+                <p>Registered Email: {{user.email}}</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Your Company. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

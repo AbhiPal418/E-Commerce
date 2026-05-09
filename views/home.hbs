@@ -180,41 +180,38 @@
 
 <body>
 
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="sec1nav">
+                    <img src="/images/shop.svg" alt="shop">
+                    <h2>SHOPIFY</h2>
+                </div>
+                <!-- <img src="shop.svg" alt="shop"> -->
+                <div class="navmiddle">
 
-    <!-- Add 'show' class to make it visible -->
-    <div class="cart-bar show">
-        Item added to your cart 🛒
-    </div>
+                    <P></P>
+                </div>
+                <div class="sec2nav">
+                    <!-- <img id = "a01" src="/images/opencart.svg" alt=""> -->
+                    <h3 id="a11"><a href="/signup">Sign up</a></h3>
+                    <h3 id="a12"><a href="/login">🔑 Login</a></h3>
+                    {{!-- <a href="/templets/Viewcart.html"><img id="a01" src="/images/opencart.svg" alt=""></a>
+                    <img id="a02" src="/images/dots.svg" alt="shop"> --}}
+
+                </div>
+            </nav>
+        </div>
+    </header>
 
 
-    <div class="container">
-        <nav class="navbar">
-            <div class="sec1nav">
-                <img src="/images/shop.svg" alt="shop">
-                <h2>SHOPIFY</h2>
-            </div>
-            <!-- <img src="shop.svg" alt="shop"> -->
-            <div class="navmiddle">
-
-                <P></P>
-            </div>
-            <div class="sec2nav">
-                <!-- <img id = "a01" src="/images/opencart.svg" alt=""> -->
-                <h3 id="a11"><a href="/signup">Sign up</a></h3>
-                <h3 id="a12"><a href="/login">Log in</a></h3>
-                {{!-- <a href="/templets/Viewcart.html"><img id="a01" src="/images/opencart.svg" alt=""></a>
-                <img id="a02" src="/images/dots.svg" alt="shop"> --}}
-
-            </div>
-        </nav>
-        <main class="main-content">
+    <main class="main-content">
+        <section>
             <div class="Bigcontent">
                 {{#each products}}
-                <div class="itemscard">
                     <div class="card">
                         <div class="image-box">
                             <img src="/images/MensStyleLooks.jpeg" alt="product">
-                            <button class="add-btn">Add to Cart</button>
                         </div>
 
                         <div class="content">
@@ -223,33 +220,32 @@
 
                             <div class="price">
                                 <span class="new">₹{{this.price}}</span>
-                                {{!-- <span class="old">₹{{this.originalPrice}}</span> --}}
                             </div>
 
                         </div>
                         <div class="cart">
                             <form action="/add-to-cart/{{this._id}}" method="POST">
                                 <input type="hidden" name="price" value="{{this.price}}">
-                                <a href="/buy-now/{{this._id}}" type="button">Buy Now</a>
                                 <button type="submit">Add to Cart</button>
+                            </form>
+                            <form action="/buy-now/{{this._id}}" method="POST">
+                                <input type="hidden" name="price" value="{{this.price}}">
+                                <button type="submit">Buy Now</button>
                             </form>
                         </div>
                     </div>
 
-                </div>
                 {{/each}}
-
-
-                {{!-- <div class="viewoption">
-                    <ul>
-                        <li>MENS SPECIAL</li>
-                        <li>WOMENS SPECIAL</li>
-                        <li>NEW ARRIVAL</li>
-                    </ul>
-                </div> --}}
             </div>
-        </main>
-        <script src="/function/script.js"></script>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Shopify. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="/function/script.js"></script>
 </body>
 
 </html>

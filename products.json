@@ -1,0 +1,541 @@
+[
+    {
+        "productName": "Wireless Headphones",
+        "productDescription": "Noise-cancelling over-ear headphones with 20 hours battery life",
+        "price": 2999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"headphones",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience crystal-clear sound with our noise-cancelling over-ear headphones. With 20 hours of battery life, you can enjoy your favorite music all day long."
+    },
+    {
+        "productName": "Smart Watch",
+        "productDescription": "Fitness tracking smartwatch with heart rate monitor",
+        "price": 1999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"smartwatch",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Track your fitness goals with our smartwatch featuring a heart rate monitor and sleep tracking."
+    },
+    {
+        "productName": "Bluetooth Speaker",
+        "productDescription": "Portable speaker with deep bass and waterproof design",
+        "price": 1499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"speaker",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy immersive sound with our portable Bluetooth speaker featuring deep bass and a waterproof design."
+    },
+    {
+        "productName": "Laptop Backpack",
+        "productDescription": "Durable backpack with USB charging port",
+        "price": 899,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"backpack",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Keep your laptop safe and organized with our durable backpack featuring a USB charging port."
+    },
+    {
+        "productName": "Gaming Mouse",
+        "productDescription": "High precision RGB gaming mouse",
+        "price": 699,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"mouse",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience precise control with our high-performance RGB gaming mouse."
+    },
+    {
+        "productName": "Mechanical Keyboard",
+        "productDescription": "RGB backlit keyboard with blue switches",
+        "price": 2499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"keyboard",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy a tactile typing experience with our mechanical keyboard featuring RGB backlit keys and blue switches."
+    },
+    {
+        "productName": "Power Bank",
+        "productDescription": "10000mAh fast charging portable power bank",
+        "price": 799,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"powerbank",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Keep your devices charged on the go with our fast charging portable power bank."
+    },
+    {
+        "productName": "Smartphone Stand",
+        "productDescription": "Adjustable aluminum phone stand",
+        "price": 299,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"stand",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Elevate your smartphone for better viewing angles with our adjustable aluminum phone stand."
+    },
+    {
+        "productName": "LED Desk Lamp",
+        "productDescription": "Eye-protection lamp with brightness control",
+        "price": 599,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"lamp",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Reduce eye strain with our LED desk lamp featuring adjustable brightness control."
+    },
+    {
+        "productName": "USB Hub",
+        "productDescription": "4-port USB 3.0 hub for multiple devices",
+        "price": 499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"hub",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Connect multiple USB devices to your computer with our 4-port USB 3.0 hub."
+    },
+    {
+        "productName": "External Hard Drive",
+        "productDescription": "1TB portable hard disk with fast transfer speed",
+        "price": 3499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"harddrive",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Store your files securely with our 1TB portable hard disk featuring fast transfer speeds."
+    },
+    {
+        "productName": "Wireless Charger",
+        "productDescription": "Fast charging pad for smartphones",
+        "price": 999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"charger",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Charge your smartphone wirelessly with our fast charging pad."
+    },
+    {
+        "productName": "Action Camera",
+        "productDescription": "4K waterproof action camera for adventure",
+        "price": 4999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"camera",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Capture your adventures with our 4K waterproof action camera."
+    },
+    {
+        "productName": "Tripod Stand",
+        "productDescription": "Adjustable tripod for camera and mobile",
+        "price": 899,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"stand",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Stabilize your shots with our adjustable tripod for camera and mobile."
+    },
+    {
+        "productName": "Noise Cancelling Earbuds",
+        "productDescription": "True wireless earbuds with ANC support",
+        "price": 2599,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"earbuds",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience crystal-clear sound with our noise-cancelling over-ear headphones. With 20 hours of battery life, you can enjoy your favorite music all day long."
+    },
+    {
+        "productName": "Fitness Band",
+        "productDescription": "Track steps, sleep, and calories burned",
+        "price": 1499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"smartwatch",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Track your fitness goals with our smartwatch featuring a heart rate monitor and sleep tracking."
+    },
+    {
+        "productName": "Gaming Chair",
+        "productDescription": "Ergonomic chair with lumbar support",
+        "price": 8999,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"chair",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy comfortable gaming sessions with our ergonomic chair featuring lumbar support."
+    },
+    {
+        "productName": "Monitor",
+        "productDescription": "24-inch Full HD LED monitor",
+        "price": 10999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"monitor",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience vibrant visuals with our 24-inch Full HD LED monitor."
+    },
+    {
+        "productName": "Webcam",
+        "productDescription": "HD webcam for video calls and streaming",
+        "price": 1299,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"webcam",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Capture clear video footage with our HD webcam designed for video calls and streaming."
+    },
+    {
+        "productName": "Microphone",
+        "productDescription": "Studio-quality USB microphone for recording",
+        "price": 2199,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"microphone",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Record high-quality audio with our studio-quality USB microphone."
+    },
+    {
+        "productName": "Tablet",
+        "productDescription": "10-inch Android tablet for entertainment and work",
+        "price": 15999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"tablet",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy seamless multitasking with our 10-inch Android tablet designed for both entertainment and productivity."
+    },
+    {
+        "productName": "Smart TV",
+        "productDescription": "43-inch Full HD smart television with streaming apps",
+        "price": 28999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"tv",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience stunning visuals with our 43-inch Full HD smart television featuring built-in streaming apps."
+    },
+    {
+        "productName": "Router",
+        "productDescription": "High-speed WiFi router with dual band support",
+        "price": 2499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"router",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy fast and reliable WiFi connectivity with our high-speed router featuring dual band support."
+    },
+    {
+        "productName": "Keyboard Cover",
+        "productDescription": "Silicone keyboard protector for laptops",
+        "price": 399,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"keyboardcover",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Protect your laptop keyboard with our silicone cover, designed to fit snugly and prevent spills."
+    },
+    {
+        "productName": "Mouse Pad",
+        "productDescription": "Large anti-slip mouse pad for gaming",
+        "price": 299,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"mousepad",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enhance your gaming experience with our large anti-slip mouse pad."
+    },
+    {
+        "productName": "Graphics Tablet",
+        "productDescription": "Digital drawing tablet for designers",
+        "price": 5999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"tablet",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Bring your digital artwork to life with our high-resolution graphics tablet."
+    },
+    {
+        "productName": "VR Headset",
+        "productDescription": "Virtual reality headset for immersive gaming",
+        "price": 7999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"vr",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Immerse yourself in virtual worlds with our cutting-edge VR headset."
+    },
+    {
+        "productName": "Smart Bulb",
+        "productDescription": "WiFi-enabled LED bulb with color control",
+        "price": 699,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"smartbulb",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Control the lighting in your home with our WiFi-enabled smart bulb."
+    },
+    {
+        "productName": "Extension Board",
+        "productDescription": "6-socket power strip with surge protection",
+        "price": 899,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"extensionboard",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Expand your power options with our 6-socket power strip featuring surge protection."
+    },
+    {
+        "productName": "Electric Kettle",
+        "productDescription": "1.5L fast boiling electric kettle",
+        "price": 1299,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"kettle",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Boil water quickly with our 1.5L electric kettle designed for fast heating."
+    },
+    {
+        "productName": "Air Purifier",
+        "productDescription": "Removes dust and allergens from air",
+        "price": 8999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"airpurifier",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Enjoy cleaner air with our air purifier that removes dust and allergens."
+    },
+    {
+        "productName": "Portable Fan",
+        "productDescription": "Rechargeable mini fan for travel",
+        "price": 499,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"portablefan",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Stay cool on the go with our rechargeable portable fan."
+    },
+    {
+        "productName": "Hair Dryer",
+        "productDescription": "Compact hair dryer with heat control",
+        "price": 1499,
+        "category": "accessories",
+        "availabelity":true,        
+        "itemCatagory":"hairdryer",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Dry your hair quickly and efficiently with our compact hair dryer."
+    },
+    {
+        "productName": "Trimmer",
+        "productDescription": "Rechargeable grooming trimmer",
+        "price": 999,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"trimmer",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Keep your grooming routine easy with our rechargeable grooming trimmer."
+    },
+    {
+        "productName": "Iron",
+        "productDescription": "Steam iron with non-stick soleplate",
+        "price": 1799,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"iron",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Iron your clothes with ease using our steam iron with a non-stick soleplate."
+    },
+    {
+        "productName": "Coffee Maker",
+        "productDescription": "Automatic coffee machine for home use",
+        "price": 3499,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"coffeemaker",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Brew your favorite coffee at home with our automatic coffee maker."
+    },
+    {
+        "productName": "Mixer Grinder",
+        "productDescription": "Multi-purpose kitchen mixer with jars",
+        "price": 3999,
+        "category": "electronics",
+        "availabelity":true,
+        "itemCatagory":"mixergrinder",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Effortlessly blend and mix ingredients with our powerful mixer grinder."
+    },
+    {
+        "productName": "Water Bottle",
+        "productDescription": "Insulated stainless steel water bottle",
+        "price": 599,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"waterbottle",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Keep your drinks at the perfect temperature with our insulated stainless steel water bottle."
+    },
+    {
+        "productName": "Lunch Box",
+        "productDescription": "Leak-proof lunch box with compartments",
+        "price": 499,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"lunchbox",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Carry your meals in style with our leak-proof lunch box featuring multiple compartments."
+    },
+    {
+        "productName": "Backpack",
+        "productDescription": "Stylish everyday backpack for students",
+        "price": 999,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"backpack",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Carry your belongings in style with our trendy everyday backpack."
+    },
+    {
+        "productName": "Sunglasses",
+        "productDescription": "UV protection stylish sunglasses",
+        "price": 799,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"sunglasses",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Protect your eyes from harmful UV rays with our stylish sunglasses."
+    },
+    {
+        "productName": "Wallet",
+        "productDescription": "Leather wallet with multiple compartments",
+        "price": 699,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"wallet",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Carry your essentials in style with our genuine leather wallet."
+    },
+    {
+        "productName": "Shoes",
+        "productDescription": "Comfortable running shoes",
+        "price": 2499,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"shoes",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience comfort and performance with our lightweight running shoes."
+    },
+    {
+        "productName": "T-Shirt",
+        "productDescription": "Cotton casual wear t-shirt",
+        "price": 599,
+        "category": "clothing",
+        "availabelity":true,
+        "itemCatagory":"tshirt",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Stay comfortable in our soft cotton t-shirt."
+    },
+    {
+        "productName": "Jeans",
+        "productDescription": "Slim fit denim jeans",
+        "price": 1499,
+        "category": "clothing",
+        "availabelity":true,
+        "itemCatagory":"jeans",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Dress stylishly in our slim fit denim jeans."
+    },
+    {
+        "productName": "Jacket",
+        "productDescription": "Winter jacket with insulation",
+        "price": 2999,
+        "category": "clothing",
+        "availabelity":true,
+        "itemCatagory":"jacket",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Stay warm in our insulated winter jacket."
+    },
+    {
+        "productName": "Cap",
+        "productDescription": "Adjustable casual cap",
+        "price": 399,
+        "category": "clothing",
+        "availabelity":true,
+        "itemCatagory":"cap",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Complete your look with our adjustable casual cap."
+    },
+    {
+        "productName": "Watch",
+        "productDescription": "Analog wrist watch for daily use",
+        "price": 1999,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"watch",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Keep track of time in style with our analog wrist watch."
+    },
+    {
+        "productName": "Notebook",
+        "productDescription": "200-page ruled notebook",
+        "price": 199,
+        "category": "stationery",
+        "availabelity":true,
+        "itemCatagory":"notebook",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Organize your thoughts with our 200-page ruled notebook."
+    },
+    {
+        "productName": "Pen Set",
+        "productDescription": "Pack of 10 smooth writing pens",
+        "price": 149,
+        "category": "stationery",
+        "availabelity":true,
+        "itemCatagory":"penset",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Write smoothly with our pack of 10 high-quality pens."
+    },{
+        "productName": "Backpack",
+        "productDescription": "Stylish everyday backpack for students",
+        "price": 999,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"backpack",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Carry your belongings in style with our trendy everyday backpack."
+    },
+    {
+        "productName": "Sunglasses",
+        "productDescription": "UV protection stylish sunglasses",
+        "price": 799,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"sunglasses",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Protect your eyes from harmful UV rays with our stylish sunglasses."
+    },
+    {
+        "productName": "Wallet",
+        "productDescription": "Leather wallet with multiple compartments",
+        "price": 699,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"wallet",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Carry your essentials in style with our genuine leather wallet."
+    },
+    {
+        "productName": "Shoes",
+        "productDescription": "Comfortable running shoes",
+        "price": 2499,
+        "category": "accessories",
+        "availabelity":true,
+        "itemCatagory":"shoes",
+        "image":"\\images\\MensStyleLooks.jpeg",
+        "productDescriptionDetailed": "Experience comfort and performance with our lightweight running shoes."
+    }
+]

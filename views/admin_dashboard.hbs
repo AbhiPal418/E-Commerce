@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Admin Dashboard</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -84,46 +84,121 @@
 </head>
 
 <body>
-    <h1>Admin Dashboard</h1>
-    <p>Welcome to the admin dashboard!</p>
-    <a href="/add-product">Add Product</a>
-    <div class="product-list">
-        <h2>Product List</h2>
-        <ul>
-            {{#each products}}
-            <div class="product-card">
-                <li>
-                    <h3>{{this.productName}}</h3>
-                    <p>{{this.productDescription}}</p>
-                    <p>Price: ₹ {{this.price}}</p>
-                    
-                    <form method="POST" action="/delete-product/{{this._id}}">
-                        <button type="submit">Delete</button>
-                    </form>
-                    <a href="/edit-product/{{this._id}}">Edit</a>
-                </li>
-            </div>
-            {{/each}}
-        </ul>
-    </div>
+    <header>
+        <div class="navbar">
+            <h1>Admin Dashboard</h1>
+            <nav>
+                <ul>
+                    <li><a href="/admin-dashboard">Home</a></li>
+                    <li><a href="/add-product">Add Product</a></li>
+                    <li><a href="/bulk-add">Bulk Add Products</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                    <li><a href="#orders">Orders</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="orderlist">
-        <h2>Order List</h2>
-        <ul>
-            {{#each orders}}
-            <div class="product-card">
-                <li>
-                    <h3>Order ID: {{this._id}}</h3>
-                    <p>Customer Name: {{this.customerName}}</p>
-                    <p>Product Name: {{this.productName}}</p>
-                    <p>Quantity: {{this.quantity}}</p>
-                    <p>Total Price: ₹ {{this.totalPrice}}</p>
-                </li>
+    <main>
+        <section class="search-box">
+            <div class="searchProduct">
+                <form action="/admin-dashboard" method="GET">
+                    <input type="text" name="query" placeholder="Search for products..." required>
+                    <button type="submit">Search</button>
+                </form>
             </div>
-            {{/each}}
-        </ul>
-    </div>
+        </section>
 
+        <section class="addedProductList">
+            <div class="product-list">
+                <h2>Product List</h2>
+                <ul>
+                    {{#each products}}
+                    <div class="product-card">
+                        <li>
+                            <h3>{{this.productName}}</h3>
+                            <p>{{this.productDescription}}</p>
+                            <p>Price: ₹ {{this.price}}</p>
+
+                            <form method="POST" action="/delete-product/{{this._id}}">
+                                <button type="submit">Delete</button>
+                            </form>
+                            <a href="/edit-product/{{this._id}}">Edit</a>
+                        </li>
+                    </div>
+                    {{/each}}
+                </ul>
+            </div>
+
+        </section>
+
+
+        <section class="allOrderList">
+            <div class="orderlist" id="orders">
+                <h2>Pending</h2>
+                <ul>
+                    {{#each orders}}
+                    <div class="product-card">
+                        <li>
+                            <h3>Order ID: {{this._id}}</h3>
+                            <p>Customer Name: {{this.user_id.username}}</p>
+                            {{#each this.items}}
+                            <p>Product Name: {{this.product.productName}}</p>
+                            <p>Quantity: {{this.product.quantity}}</p>
+                            <p>Total Price: ₹ {{this.product.price}}</p>
+                            <p>Status: {{this.status}}</p>
+                            <form method="POST" action="/delete-order/{{../this.user_id._id}}/{{this._id}}">
+                                <button type="submit">Delete Order</button>
+                            </form>
+                            <form method="POST" action="/update-order/{{../this.user_id._id}}/{{this._id}}">
+                                <button type="submit">Mark as Delivered</button>
+                            </form>
+                            {{/each}}
+                        </li>
+                        {{!-- <h3>Total Amount: ₹ {{this.totalAmount}}</h3> --}}
+                    </div>
+
+
+                    {{/each}}
+
+                </ul>
+            </div>
+        </section>
+
+
+        <section class="allOrderList">
+            <div class="orderlist" id="orders">
+                <h2>Delivered</h2>
+                <ul>
+                    {{#each deliverorders}}
+                    <div class="product-card">
+                        <li>
+                            <h3>Order ID: {{this._id}}</h3>
+                            <p>Customer Name: {{this.user_id.username}}</p>
+                            {{#each this.items}}
+                            <p>Product Name: {{this.product.productName}}</p>
+                            <p>Quantity: {{this.product.quantity}}</p>
+                            <p>Total Price: ₹ {{this.product.price}}</p>
+                            <p>Status: {{this.status}}</p>
+                            <form method="POST" action="/delete-order/{{../this.user_id._id}}/{{this._id}}">
+                                <button type="submit">Delete Order</button>
+                            </form>
+                            <form method="POST" action="/update-order/{{../this.user_id._id}}/{{this._id}}">
+                                <button type="submit">Mark as Delivered</button>
+                            </form>
+                            {{/each}}
+                        </li>
+                    </div>
+                    {{/each}}
+
+                </ul>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p>&copy; 2024 E-Commerce Platform. All rights reserved.</p>
+    </footer>
 </body>
 
 </html>

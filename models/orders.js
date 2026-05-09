@@ -4,13 +4,13 @@ const mongoURI = process.env.MONGO_URI;
 
 mongoose.connect(mongoURI, {
 }).then(() => {
-    console.log("Connected Cart...");
+    console.log("Connected orders...");
 }).catch(() => {
     console.log("Failed...");
 })
 
 
-const cartSchema = new mongoose.Schema({
+const OrderSchema = new mongoose.Schema({
     user_id: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "User",
@@ -33,10 +33,32 @@ const cartSchema = new mongoose.Schema({
                 type: Number,
                 required: true
 
+            },
+            status: {
+                type: String,
+                default: "Pending"
+            },
+            orderDate: {
+                type: Date,
+                default: Date.now
             }
         }
-    ]
-});
+    ],
+    totalAmount: {
+        type: Number,
+    },
+    orderStatus: {
+        type: String,
+        default: "Placed"
+    },
+    orderlocation:{
+        type:String,
+        required:true
+    }
 
-module.exports = mongoose.model("Cart", cartSchema);
+}
+);
+
+
+module.exports = mongoose.model("Order", OrderSchema);
 

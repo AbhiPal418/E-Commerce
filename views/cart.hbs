@@ -1,74 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cart</title>
+    <title>Customer Cart</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        a {
-            display: inline-block;
-            margin: 10px 0;
-            color: #007BFF;
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .product-card {
-            background-color: white;
-            border-radius: 5px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-            padding: 20px;
-            margin-top: 20px;
-
-        }
-
-        .product-card ul {
-            list-style-type: none;
-            padding: 0;
-            display: flex;
-            flex-direction: row;
-
-        }
-
-        .product-card li {
-            margin: 0 20px 0 0;
-        }
 
     </style>
 
+    <link rel="stylesheet" href="/css/cart.css">
+
 </head>
+
 <body>
-    <h1>Shopping Cart</h1>
-    <p>Hello {{name}}! Your cart is currently empty.</p>
-    <a href="/customer-dashboard">Back to Dashboard</a><br>
-    <a href="/logout">Logout</a>
+    <header>
+        <div class="nav">
+            <nav>
+                <h1>Your Cart</h1>
+                <ul>
+                    <li><a href="/customer-dashboard">Home</a></li>
+                    <li><a href="/logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-    <div class="product-card">
-        <ul>
-            {{#each products}}
-            <li>
-                <h3>{{product.productName}}</h3>
-                <p>{{product.productDescription}}</p>
-                <p>Price: ₹{{product.price}}</p>
-                
-            </li>
-            {{/each}}
-        </ul>
-    </div>
 
+    <main>
+        <section>
+            <div class="placeorder">
+                <h3>Total Price: ₹ {{totalPrice}}</h3>
+                <form action="/place-order-from-cart/{{user_id}}" method="GET">
+                    <input type="hidden" name="totalPrice" value="{{totalPrice}}">
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+
+
+        <section>
+            <div class="product-card">
+                <ul>
+                    {{#if products.length}}
+                    {{#each products}}
+                    <div class="cart-items">
+
+                        <div class="item-info">
+                            <h3>{{product.productName}}</h3>
+                            <p>{{product.productDescription}}</p>
+                            <p>Price: ₹{{product.price}}</p>
+                        </div>
+                        <div class="item-actions">
+                            <form action="/remove-from-cart/{{this._id}}" method="POST">
+                                <input type="hidden" name="price" value="{{this.price}}">
+                                <button type="submit">Remove from Cart</button>
+                            </form>
+
+
+                            <form action="/buy-now/{{product._id}}" method="GET">
+                                <input type="hidden" name="price" value="{{this.price}}">
+                                <button type="submit">Buy Now</button>
+                            </form>
+
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{else}}
+                    <p>Your cart is currently empty.</p>
+                    {{/if}}
+                </ul>
+                <h3>Total Price: ₹ {{totalPrice}}</h3>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your E-commerce Site. All rights reserved.</p>
+    </footer>
 </body>
+
 </html>

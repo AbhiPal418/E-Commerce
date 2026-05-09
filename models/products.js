@@ -20,15 +20,34 @@ const ProductSchema = new mongoose.Schema({
         type: String,
         required: true
     },
+    productDescriptionDetailed: {
+        type: String,
+        required: true
+    },
+    category: {
+        type: String,
+        default: "All"
+    },
+    availabelity: {
+        type: Boolean,
+        default: true
+    },
     quantity: {
         type: Number,
         default: 1
-
     },
     price: {
         type: Number,
         required: true
 
+    },
+    image: {
+        type: String,
+        default: "\\images\\MensStyleLooks.jpeg"
+    },
+    itemCatagory:{
+        type:String,
+        required:true
     }
 }
 );

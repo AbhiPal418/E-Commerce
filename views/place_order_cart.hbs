@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place Order</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="/customer-dashboard">Home</a>
+            <a href="/logout">Logout</a>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <div class="placeorder">
+                <p>Total Price: ₹ <span id="totalPrice">{{totalPrice}}</span></p>
+
+                <form action="/place-order-from-cart/{{user_id}}" method="POST">
+                    <label>
+                        <input type="radio" name="paymentMethod" value="COD" onchange="updatePrice()" required>
+                        Cash on Delivery
+                    </label>
+
+                    <label>
+                        <input type="radio" name="paymentMethod" checked value="ONLINE" onchange="updatePrice()">
+                        Online Payment
+                    </label>
+                    <input type="text" name="location" placeholder="Enter your location" required>
+                    <input type="hidden" name="totalPrice" value="{{totalPrice}}">
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your E-commerce Site. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function updatePrice() {
+            const basePrice = {{ totalPrice }}; // from backend
+        const codCharge = basePrice * 0.01; // extra charge
+
+        const selected = document.querySelector('input[name="paymentMethod"]:checked');
+
+        let finalPrice = basePrice;
+
+        if (selected.value === "COD") {
+            finalPrice += codCharge;
+        }
+
+        document.getElementById("totalPrice").innerText = finalPrice;
+
+        document.getElementById("hiddenPrice").value = finalPrice;
+        }
+
+
+    </script>
+</body>
+
+</html>
